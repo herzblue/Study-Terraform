@@ -13,7 +13,7 @@ resource "google_compute_instance" "gcp-ububtu" {
       image = "ubuntu-os-cloud/ubuntu-2004-lts"
     }
   }
-  metadata_startup_script = "echo "Hello, ygpark-gcp" > index.html;nohup busybox httpd -f -p 50000 &;"
+  metadata_startup_script = "echo \"Hello, ygpark-gcp\" > index.html;nohup busybox httpd -f -p 50000 &;"
   network_interface {
     network = "default"
     access_config {
